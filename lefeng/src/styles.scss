@@ -1,0 +1,70 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption 
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    color: #333;
+    font-weight: normal;
+    font-family: "Microsoft Yahei";
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background:#fff;
+}
+ul,li{
+    list-style: none;
+}
+#app,.heightBox{
+    height: 100%;
+}
+
+.skin{
+    background: #FFC800 !important;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+    zoom: 1; 
+}
+.bigbox{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .contain{
+        height: 100%;
+        overflow-x:hidden;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.footnav{
+    ul{
+        height: 2.173333rem;
+        background: #fff;
+        color: #666666;
+        display: flex;
+        border-top: 1px solid #DADCDB;
+        li{
+            float: left;
+            width: 20%;
+            text-align: center;
+            font-size: 0.4rem;
+            align-self: center;
+            display:flex;
+            flex-direction: column;
+            span{
+                font-size: 0.72rem;
+            }
+        }
+    }
+}

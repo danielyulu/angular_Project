@@ -1,0 +1,25 @@
+.footnav{
+        ul{
+            height: 2.173333rem;
+            background: #fff;
+            color: #666666;
+            display: flex;
+            border-top: 1px solid #DADCDB;
+            li{
+                float: left;
+                width: 20%;
+                text-align: center;
+                font-size: 0.4rem;
+                align-self: center;
+            }
+            li.active{
+                span{
+                    
+                    color:red;
+                }
+                a{
+                    color:red;
+                }
+            }
+        }
+    }

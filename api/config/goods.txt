@@ -1,0 +1,43 @@
+{
+    "api":"getgoods",
+    "cols":"*",
+    "api":"goods",
+    "cols":"name,brandStoreName,marketPrice,vipshopPrice,class,originArea",
+    "filterCols":"imgurl,color,size,type",
+    "key":"gid",
+    "mutipleSelect":true,
+    "pagination":{
+        "pageitems":20
+    },
+    "dictionary":{
+        "en":{
+
+        },
+        "cn":{
+            "details":"描述信息"
+        }
+    },
+    "filterData":{
+        "add_time":{
+            "type":"DateFormat",
+            "format":"yyyy-MM-dd"
+        },
+        "name":{
+            "type":"Replace",
+            "reg":"(d).+",
+            "replaceVal":"$1**"
+        }
+    },
+    "search":{
+        "show":true,
+        "api":"goodsForm.txt"
+    },
+    "edit":true,
+    "multiple":true,
+    "delete":{
+        "show":true,
+        "api":"deletegood",
+        "batchapi":"deletebatch"
+    },
+    "searchapi":"searchgoods"
+}

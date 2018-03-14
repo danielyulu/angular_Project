@@ -1,0 +1,82 @@
+<div class="bigbox clearfix">
+	<div class="clearfix">
+		<search></search>
+	</div> 
+	<div class="contain">
+        <div class="hufu">
+            <ul class="daohang">
+                <li class="active">
+                    <a routerLink="/classify">分类</a>
+                    <div></div>
+                </li>
+                <li><a routerLink="/pinpai">品牌</a></li>  
+            </ul>
+            <div>
+                <div class="abc"></div>
+                <div class="biaoti">
+                    <span><<<<<<<<<<<<<<</span>
+                    <p>面部护理</p>
+                    <span>>>>>>>>>>>>>>></span>
+                </div>
+                <ul class="goods"  (click)=toList($event)>
+                    <li *ngFor="let obj of facedataset">
+                        <img src={{obj.img}} alt="" title={{obj.title}}/>
+                        <p>{{obj.name}}</p>
+                    </li>
+                </ul>
+                <div class="abc"></div>
+                <div class="biaoti">
+                    <span><<<<<<<<<<<<<<</span>
+                    <p>男士护肤</p>
+                    <span>>>>>>>>>>>>>>></span>
+                </div>
+                <ul class="goods"  (click)=toList($event)>
+                    <li *ngFor="let obj of mandataset">
+                        <img src={{obj.img}} alt="" title={{obj.title}}/>
+                        <p>{{obj.name}}</p>
+                    </li>
+                </ul>
+                <div class="abc"></div>
+                <div class="biaoti">
+                    <span><<<<<<<<<<<<<<</span>
+                    <p>彩妆</p>
+                    <span>>>>>>>>>>>>>>></span>
+                </div>
+                <ul class="goods"  (click)=toList($event)>
+                    <li *ngFor="let obj of czdataset">
+                        <img src={{obj.img}} alt="" title={{obj.title}}/>
+                        <p>{{obj.name}}</p>
+                    </li>
+                </ul>
+                <div class="abc"></div>
+                <div class="biaoti">
+                    <span><<<<<<<<<<<<<<</span>
+                    <p>个人护理</p>
+                    <span>>>>>>>>>>>>>>></span>
+                </div>
+                <ul class="goods"  (click)=toList($event)>
+                    <li *ngFor="let obj of hldataset">
+                        <img src={{obj.img}} alt="" title={{obj.title}}/>
+                        <p>{{obj.name}}</p>
+                    </li>
+                </ul>
+                <div class="abc"></div>
+                <div class="biaoti">
+                    <span><<<<<<<<<<<<<<</span>
+                    <p>香水香氛</p>
+                    <span>>>>>>>>>>>>>>></span>
+                </div>
+                <ul class="goods"  (click)=toList($event)>
+                    <li *ngFor="let obj of xsdataset">
+                        <img src={{obj.img}} alt="" title={{obj.title}}/>
+                        <p>{{obj.name}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+	</div> 
+	<footnav></footnav>		
+</div>

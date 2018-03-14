@@ -1,0 +1,59 @@
+<div class="bigbox">
+    <div class="head">
+        <span class="icon icon-left" routerLink="/order"></span>
+        <p >订单详情</p>
+        <span></span>
+    </div>
+    <div class="contain">
+        <ul *ngFor="let obj of resdata">
+        <div class="abc">&nbsp;</div>
+        <ul class="list">
+            <li><p>订单信息</p></li>
+            <li>
+                <p>订单编号：18036095424513</p>
+                <p>下单时间：<span [style.color]="'#A4A4A4'">{{obj.addtime}}</span></p>
+                <p>支付方式：<span [style.color]="'#A4A4A4'">乐峰唯宝快捷支付</span></p>
+                <p>订单状态：<span [style.color]="'#EECB79'">未支付</span></p>
+            </li>
+        </ul>
+        <ul class="list">
+            <li><p>商品信息</p></li>
+            <li class="imglist">
+                <img src={{obj.verticalImage}} alt="" />
+                <div>
+                    <span>{{obj.name}}</span>
+                    <p [style.color]="'#A4A4A4'">数量：{{obj.qty}}</p>
+                    <p>金额：￥ {{obj.goodCount}}</p>
+                </div>
+            </li>
+        </ul>
+        </ul>
+        <div class="abc">&nbsp;</div>
+        <ul class="list">
+            <li class="imglist" [style.justify-content]="'space-between'">
+                <p>发票信息</p>
+                <p>不开发票</p>
+            </li>
+        </ul>
+        <div class="abc">&nbsp;</div>
+        <ul class="list">
+            <li >
+                <p>订单金额</p>
+                <p class="imglist">商品总金额<span [style.color]="'#A4A4A4'">￥ {{total}}</span></p>
+                <p class="imglist">运费<span [style.color]="'#A4A4A4'">￥ 10.00</span></p>
+                <p class="imglist">应付金额<span [style.color]="'#C31751'">￥ {{total+10}}</span></p>
+            </li>
+        </ul>
+        <div class="abc">&nbsp;</div>
+        <ul class="imglist" [style.padding-right]="'0.46875rem'" [style.justify-content]="'space-between'">
+            <li class="blist">总金额：<span [style.color]="'#C31751'">￥ {{total+10}}</span></li>
+            <li class="imglist anniulist">
+                <div (click)=delete()>取消订单</div>
+                <div (click)=pay()>
+                    <p>支付</p>
+                    <p>￥ {{total+10}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

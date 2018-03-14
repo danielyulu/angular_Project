@@ -1,0 +1,27 @@
+{
+    "cols":"brandStoreName,vipshopPrice,name,class",
+    "colsAttributes":{
+        "brandStoreName":{
+            "type":"select-api",
+            "api":"brandStore",
+            "match":{
+                "value":"brandStoreName",
+                "text":"brandStoreName"
+            }
+        },
+        "vipshopPrice":{
+            "type":"area"
+        },
+        "class":{
+            "type":"select-api",
+            "api":"allclass",
+            "match":{
+                "value":"class",
+                "text":"class"
+            }
+        }
+
+
+    },
+    "searchapi":"searchgoods"
+}
